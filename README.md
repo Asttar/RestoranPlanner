@@ -126,7 +126,12 @@ RestoranPlanner is a web application that allows users to search and reserve a t
 ### Challenges Faced
 - Had an issue with the used svgs not scaling properly.  
   → **Solution:** Using ChatGPT to help scale them.  
-- Struggled with design choices and took inspiration from real restoran planners.  
+- Struggled with design choices and took inspiration from real restoran planners.
+- Had issues with database creation when using a superclass (Tables) with its subclasses. It also took me a long time to realise that Table is a reserved keyword.
+-   → **Solution:** ChatGPT helped map them properly with following lines:
+-     @Inheritance(strategy = InheritanceType.JOINED)
+-     @CollectionTable(name = "tables_planned_names", joinColumns = @JoinColumn(name = "table_id"))
+
 
 
 ### Assumptions Made
