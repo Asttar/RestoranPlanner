@@ -1029,10 +1029,7 @@ p {
   margin: 0;
 }
 
-img {
-  margin-right: 5px !important;
-  width: 50% !important;
-}
+
 
 .date_and_time {
   display: flex;
