@@ -39,11 +39,11 @@ import tenPeopleTable from './tenPeopleTable.vue';
             </div>
             <div class="grid-outside" v-if="seats.length && search.area == 'outside'">
                 <component :title="getBooking(seat)" :is="type(seat)" :class="position(seat)"
-                    :color="availability(seat)" v-for="seat in seats" :key="seat.id" />
+                    v-for="seat in seats" :key="seat.id" />
             </div>
             <div class="grid-private" v-if="seats.length && search.area == 'private'">
                 <component :title="getBooking(seat)" :is="type(seat)" :class="position(seat)"
-                    :color="availability(seat)" v-for="seat in seats" :key="seat.id" />
+                    v-for="seat in seats" :key="seat.id" />
                 <p style="text-align: center;" class="position-3-4">TV</p>
             </div>
             <p style="text-align: center;" v-if="seats.length && search.area == 'outside'">View to city</p>
