@@ -124,10 +124,9 @@ RestoranPlanner is a web application that allows users to search and reserve a t
 - The project took approximately **30 hours** to complete.  
 
 ### Challenges Faced
-- Had an issue where the filters weren't properly reset when no available seats matched the selected filters, or when the number of tickets exceeded 10.  
-  → **Solution:** Using ChatGPT's recommended `this.$nextTick(() => {` fixed the problem.  
-- Struggled with design choices and took inspiration from real travel planners.  
-- The most challenging part was integrating automatic seat recommendations with manual selection. It was difficult to ensure that the ticket count remained accurate when switching between the two, and that seat filters could still be applied to manually selected seats.  
+- Had an issue with the used svgs not scaling properly.  
+  → **Solution:** Using ChatGPT to help scale them.  
+- Struggled with design choices and took inspiration from real restoran planners.  
 
 
 ### Assumptions Made
