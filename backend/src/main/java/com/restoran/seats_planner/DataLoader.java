@@ -22,9 +22,9 @@ public class DataLoader implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        tablesInsideRepository.deleteAll();
-        tablesOutsideRepository.deleteAll();
-        tablesPrivateRepository.deleteAll();
+        //tablesInsideRepository.deleteAll();
+        //tablesOutsideRepository.deleteAll();
+        //tablesPrivateRepository.deleteAll();
         if (tablesInsideRepository.count() != 0 && tablesOutsideRepository.count() != 0 && tablesPrivateRepository.count() != 0) {
             return;
         }
