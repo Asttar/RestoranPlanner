@@ -107,18 +107,18 @@ import tenPeopleTable from './tenPeopleTable.vue';
 
 
   <div>
-    <p style="text-align: center;" v-if="seats.length && search.area == 'inside'">Toilet</p>
-    <p style="text-align: center;" v-if="seats.length && search.area == 'outside'">View to beach</p>
+    <p class="text-center" v-if="seats.length && search.area == 'inside'">Toilet</p>
+    <p class="text-center" v-if="seats.length && search.area == 'outside'">View to beach</p>
     <div style="display: flex; align-items: center;">
-      <p style="text-align: center;" v-if="seats.length && (search.area == 'inside' || search.area == 'private')">
+      <p class="text-center " v-if="seats.length && (search.area == 'inside' || search.area == 'private')">
         Window-side</p>
       <div class="grid-inside" v-if="seats.length && search.area == 'inside'">
         <component :is="type(seat)" :class="position(seat)" :color="availability(seat)" v-for="seat in seats"
           :key="seat.id" />
-        <p style="text-align: center;" class="position-1-9">Playground</p>
-        <p style="text-align: center;" class="position-1-10">Playground</p>
-        <p style="text-align: center;" class="position-2-9">Playground</p>
-        <p style="text-align: center;" class="position-2-10">Playground</p>
+        <p class="text-center position-1-9">Playground</p>
+        <p class="text-center position-1-10">Playground</p>
+        <p class="text-center position-2-9">Playground</p>
+        <p class="text-center position-2-10">Playground</p>
       </div>
       <div class="grid-outside" v-if="seats.length && search.area == 'outside'">
         <component :is="type(seat)" :class="position(seat)" :color="availability(seat)" v-for="seat in seats"
@@ -127,13 +127,14 @@ import tenPeopleTable from './tenPeopleTable.vue';
       <div class="grid-private" v-if="seats.length && search.area == 'private'">
         <component :is="type(seat)" :class="position(seat)" :color="availability(seat)" v-for="seat in seats"
           :key="seat.id" />
-        <p style="text-align: center;" class="position-3-4">TV</p>
+        <p class="text-center position-3-4">TV</p>
       </div>
-      <p style="text-align: center;" v-if="seats.length && search.area == 'outside'">View to city</p>
+      <p class="text-center" v-if="seats.length && search.area == 'outside'">View to city</p>
     </div>
-    <p style="text-align: center;" v-if="seats.length && search.area == 'outside'">View to garden</p>
-    <p style="text-align: center;" v-if="seats.length && search.area == 'private'">Door</p>
+    <p class="text-center" v-if="seats.length && search.area == 'outside'">View to garden</p>
+    <p class="text-center" v-if="seats.length && search.area == 'private'">Door</p>
   </div>
+  <a href="https://www.vecteezy.com/free-vector/round-table-and-chairs">Round Table And Chairs Vectors by Vecteezy</a>
 
 </template>
 
@@ -357,6 +358,10 @@ export default {
 </script>
 
 <style>
+.text-center {
+  text-align: center;
+}
+
 .grid-inside {
   background-color: #c4a484;
   margin: 10px;
@@ -403,6 +408,8 @@ export default {
 
 input[type="checkbox"] {
   transform: scale(2);
+  margin-left: 10px;
+  margin-top: 10px;
 }
 
 .time {
@@ -1038,5 +1045,4 @@ select:hover,
 #time {
   cursor: pointer;
 }
-
 </style>

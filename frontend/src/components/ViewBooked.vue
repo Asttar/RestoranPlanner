@@ -19,6 +19,7 @@ import tenPeopleTable from './tenPeopleTable.vue';
         <input type="date" id="date" :min="min" :max="max" v-model="search.date">
 
         <button type="submit">Search</button>
+        <p>Hover over tables to view their bookings.</p>
 
     </form>
 
@@ -37,12 +38,12 @@ import tenPeopleTable from './tenPeopleTable.vue';
                 <p style="text-align: center;" class="position-2-10">Playground</p>
             </div>
             <div class="grid-outside" v-if="seats.length && search.area == 'outside'">
-                <component :title="getBooking(seat)" :is="type(seat)" :class="position(seat)" :color="availability(seat)" v-for="seat in seats"
-                    :key="seat.id" />
+                <component :title="getBooking(seat)" :is="type(seat)" :class="position(seat)"
+                    :color="availability(seat)" v-for="seat in seats" :key="seat.id" />
             </div>
             <div class="grid-private" v-if="seats.length && search.area == 'private'">
-                <component :title="getBooking(seat)" :is="type(seat)" :class="position(seat)" :color="availability(seat)" v-for="seat in seats"
-                    :key="seat.id" />
+                <component :title="getBooking(seat)" :is="type(seat)" :class="position(seat)"
+                    :color="availability(seat)" v-for="seat in seats" :key="seat.id" />
                 <p style="text-align: center;" class="position-3-4">TV</p>
             </div>
             <p style="text-align: center;" v-if="seats.length && search.area == 'outside'">View to city</p>
@@ -50,7 +51,7 @@ import tenPeopleTable from './tenPeopleTable.vue';
         <p style="text-align: center;" v-if="seats.length && search.area == 'outside'">View to garden</p>
         <p style="text-align: center;" v-if="seats.length && search.area == 'private'">Door</p>
     </div>
-
+    <a href="https://www.vecteezy.com/free-vector/round-table-and-chairs">Round Table And Chairs Vectors by Vecteezy</a>
 
 </template>
 
@@ -152,10 +153,6 @@ export default {
 
 .filters>div {
     margin-bottom: 50px;
-}
-
-input[type="checkbox"] {
-    transform: scale(2);
 }
 
 .time {
